@@ -1,0 +1,49 @@
+{
+  "name": "karma-browserify-shim",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "install": "bower install",
+    "test": "gulp test"
+  },
+  "keywords": [
+    "karma",
+    "browserify-shim",
+    "bower",
+    "gulp"
+  ],
+  "author": "Vitor Pelizza",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "browserify-shim": "^3.8.12",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-browserify": "^5.0.1",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.4",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./bower_components/jquery/dist/jquery.js",
+    "angular": "./bower_components/angular/angular.js"
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "angular": {
+      "exports": "angular",
+      "depends": "jquery"
+    }
+  }
+}
