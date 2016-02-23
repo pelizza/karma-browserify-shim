@@ -1,8 +1,8 @@
 var loadedDependency = require('./dependency');
 describe('dependency', function() {
   it('should load everything', function() {
-    expect(loadedDependency).notToBeUndefined();
-    expect(loadedDependency.angularVar).notToBeUndefined();
-    expect(loadedDependency.jqueryVar).notToBeUndefined();
+    expect(loadedDependency).toBeDefined();
+    expect(loadedDependency.angularVar).toBeDefined();
+    expect(loadedDependency.jqueryVar).toBeDefined();
   });
 });
