@@ -26,8 +26,7 @@ module.exports = function(config) {
     autoWatch: false,
 
     browserify: {
-      debug: true,
-      transform: ['browserify-shim']
+      debug: true
     },
 
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
